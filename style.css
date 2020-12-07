@@ -1,0 +1,142 @@
+/* Fonts */
+@font-face {
+  font-family: Kumbh-Sans;
+  font-weight: 400;
+  src: url(./font/KumbhSans-Regular.ttf); }
+@font-face {
+  font-family: Kumbh-Sans;
+  font-weight: 700;
+  font-style: bold;
+  src: url(./font/KumbhSans-bold.ttf); }
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  position: relative;
+  background-color: #19a2ae;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .wrapper::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: url("./images/bg-pattern-top.svg") no-repeat bottom right; }
+  .wrapper::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 100%;
+    left: 100%;
+    background: url("./images/bg-pattern-bottom.svg") no-repeat top left; }
+  .wrapper .container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .wrapper .container .card {
+      width: 100%;
+      max-width: 350px;
+      padding-top: 137px;
+      border-radius: 15px;
+      background-color: white;
+      background-image: url("./images/bg-pattern-card.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+      color: #6a6f81;
+      z-index: 1; }
+      .wrapper .container .card .card-body {
+        text-align: center;
+        border-bottom: 1px solid #e7e7e7; }
+        .wrapper .container .card .card-body img {
+          margin-top: -50px;
+          border: 5px solid white;
+          border-radius: 50%;
+          width: 107px; }
+        .wrapper .container .card .card-body .profile-name {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin: 18px 0 11px;
+          font-family: Kumbh-Sans;
+          font-size: 18px; }
+          .wrapper .container .card .card-body .profile-name span:nth-child(1) {
+            font-weight: bold;
+            margin-right: 12px;
+            color: #2d3248; }
+          .wrapper .container .card .card-body .profile-name span:nth-child(2) {
+            font-weight: normal; }
+        .wrapper .container .card .card-body .city-name {
+          font-size: 14px;
+          font-family: Kumbh-Sans;
+          margin-bottom: 24px; }
+      .wrapper .container .card .card-bottom {
+        padding: 26px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly; }
+        .wrapper .container .card .card-bottom .meta-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          font-family: Kumbh-Sans; }
+          .wrapper .container .card .card-bottom .meta-item span:nth-child(1) {
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 5px;
+            color: #2d3248; }
+          .wrapper .container .card .card-bottom .meta-item span:nth-child(2) {
+            text-align: center;
+            font-weight: normal;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #6a6f81; }
+
+/*# sourceMappingURL=style.css.map */

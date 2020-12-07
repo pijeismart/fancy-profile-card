@@ -1,0 +1,121 @@
+@import "fonts";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  position: relative;
+  background-color: $dark-cyan;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background: url("./images/bg-pattern-top.svg") no-repeat bottom right;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    top: 100%;
+    left: 100%;
+    background: url("./images/bg-pattern-bottom.svg") no-repeat top left;
+  }
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .card {
+      width: 100%;
+      max-width: 350px;
+      padding-top: 137px;
+      border-radius: 15px;
+      background-color: white;
+      background-image: url("./images/bg-pattern-card.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+      color: $dark-grayish-blue;
+      z-index: 1;
+      .card-body {
+        text-align: center;
+        border-bottom: 1px solid #e7e7e7;
+        img {
+          margin-top: -50px;
+          border: 5px solid white;
+          border-radius: 50%;
+          width: 107px;
+        }
+        .profile-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 18px 0 11px;
+          font-family: Kumbh-Sans;
+          font-size: 18px;
+          span:nth-child(1) {
+            font-weight: bold;
+            margin-right: 12px;
+            color: $dark-desaturate-blue;
+          }
+          span:nth-child(2) {
+            font-weight: normal;
+          }
+        }
+        .city-name {
+          font-size: 14px;
+          font-family: Kumbh-Sans;
+          margin-bottom: 24px;
+        }
+      }
+      .card-bottom {
+        padding: 26px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .meta-item {
+          display: flex;
+          flex-direction: column;
+          font-family: Kumbh-Sans;
+          span:nth-child(1) {
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 5px;
+            color: $dark-desaturate-blue;
+          }
+          span:nth-child(2) {
+            text-align: center;
+            font-weight: normal;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: $dark-grayish-blue;
+          }
+        }
+      }
+    }
+  }
+}
